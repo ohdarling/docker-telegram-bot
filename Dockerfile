@@ -7,4 +7,4 @@ RUN apt-get update && apt-get install -y python-pip && pip install python-telegr
 RUN mkdir -p /tmp && echo /usr/bin/python \$BOT_ENTRY > /tmp/start.sh
 
 # Use baseimage-docker's init system.
-CMD ["/bin/sh /tmp/start.sh"]
+ENTRYPOINT ["/bin/sh", "/tmp/start.sh"]
