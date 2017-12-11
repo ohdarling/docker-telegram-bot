@@ -2,7 +2,7 @@
 #versison of container: 0.1.0
 FROM ubuntu:16.04
 
-RUN pip install python-telegram-bot --upgrade
+RUN apt-get update && apt-get install -y python-pip && pip install python-telegram-bot --upgrade
 
 # Use baseimage-docker's init system.
-CMD ["python $ENTRY_PATH"]
+CMD ["python $BOT_ENTRY"]
